@@ -1,15 +1,25 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace UnitTestProject1
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest1
     {
-        [TestMethod]
-        public void TestMethod1()
+        [Test]
+        public void TestCompareOne()
         {
-            // test method
+            int x = 5;
+            int y = 5;
+             Assert.AreEqual(x, y);
+        }
+
+        [Test]
+        public void TestCompareTwo()
+        {
+            int x = 5;
+            int y = 7;
+             Assert.AreEqual(x, y);
         }
     }
 }
